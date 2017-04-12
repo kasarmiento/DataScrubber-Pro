@@ -1,0 +1,42 @@
+﻿<ArcGIS defaultAssembly="DataScrubberPro.dll" defaultNamespace="DataScrubberPro" xmlns="http://schemas.esri.com/DADF/Registry" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.esri.com/DADF/Registry file:///C:/Users/kasar_000/AppData/Local/Programs/ArcGIS/Pro/bin/ArcGIS.Desktop.Framework.xsd">
+  <AddInInfo id="{08aec1ab-226b-4ccb-bf12-415b07251607}" version="1.0" desktopVersion="1.4.7198">
+    <Name>DataScrubberPro</Name>
+    <Description>DataScrubberPro description</Description>
+    <Image>Images\AddinDesktop32.png</Image>
+    <Author>khamilleas</Author>
+    <Company>Acme</Company>
+    <Date>3/9/2017 1:51:10 PM, 2017</Date>
+    <Subject>Framework</Subject>
+    <!-- Note subject can be one or more of these topics:
+                    Content, Framework, Editing, Geodatabase, Geometry, Geoprocessing, Layouts, Map Authoring, Map Exploration -->
+  </AddInInfo>
+  <modules>
+    <insertModule id="DataScrubberPro_Module" className="modDataScrubberPro" autoLoad="false" caption="modDataScrubberPro">
+      <!-- uncomment to have the control hosted on a separate tab-->
+      <tabs>
+        <!--<tab id="DataScrubberPro_Tab1" caption="New Tab">
+          <group refID="DataScrubberPro_Group1"/>
+        </tab>-->
+      </tabs>
+      <groups>
+        <!-- comment this out if you have no controls on the Addin tab to avoid
+              an empty group-->
+        <group id="DataScrubberPro_Group1" caption="Group 1" appearsOnAddInTab="true">
+          <!-- host controls within groups -->
+          <button refID="DataScrubberPro_dockpaneDataScrubberPro_ShowButton" size="large" />
+        </group>
+      </groups>
+      <controls>
+        <!-- add your controls here -->
+        <button id="DataScrubberPro_dockpaneDataScrubberPro_ShowButton" caption="Show dockpaneDataScrubberPro" className="dockpaneDataScrubberPro_ShowButton" loadOnClick="true" smallImage="Images\GenericButtonPurple16.png" largeImage="Images\GenericButtonPurple32.png">
+          <tooltip heading="Show Dockpane">Show Dockpane<disabledText /></tooltip>
+        </button>
+      </controls>
+      <dockPanes>
+        <dockPane id="DataScrubberPro_dockpaneDataScrubberPro" caption="dockpaneDataScrubberPro" className="dockpaneDataScrubberProViewModel" dock="group" dockWith="esri_core_contentsDockPane">
+          <content className="dockpaneDataScrubberProView" />
+        </dockPane>
+      </dockPanes>
+    </insertModule>
+  </modules>
+</ArcGIS>
